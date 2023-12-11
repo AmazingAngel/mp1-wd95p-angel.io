@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <script>
+        //IPO model
+        //Varible 
+        //INPUT
+        let num1 = prompt("Enter 1st number"); //text : string
+        console.log('first value ' + num1);
+        let num2 = prompt("Enter second number"); //text : string
+        console.log('second value ' + num2);
+        
+        let isOkNum1 = true; //boolean
+        let isOkNum2 = true; //boolean 
+
+        //validation
+        if  (isNaN(num1) == true)   { //to check if the input is number or not, if true its a not number
+            alert("Num1 is not a number");
+            console.log('actual value of num1:' + num1);
+            isOkNum1 = false;
+        }
+        if  (isNaN(num2) == true) {
+            alert("Num2 is not a number");
+            console.log('actual value of num2:' + num2);
+            isOkNum2 = false;
+        }
+
+        //PROCESS addition
+        if  (isOkNum1 == true && isOkNum2 == true)  {
+
+            let oknum1 = parseInt(num1);
+            let oknum2 = parseInt(num2);
+           
+            const sum = oknum1 + oknum2; 
+            const ave = sum/2;
+
+            const mul = oknum1 * oknum2; 
+            const div = oknum1 / oknum2; 
+            const subs = oknum1 - oknum2; 
+
+            document.write('<p><b>The result of addition is '+ sum +'</></p>');
+            document.write('<p><b>The result of addition is '+ ave +'</></p>');
+
+           
+      
+
+            
+            
+            //OUTPUT
+             alert('result: ' + sum);
+             document.write('<p><b>The result of addition is '+ sum +'</></p>');
+             document.write('<p><b>The result of multiplication is '+ mul +'</></p>');
+             document.write('<p><b>The result of division is '+ div +'</></p>');
+             document.write('<p><b>The result of substraction is '+ subs +'</></p>');
+          
+                
+        } else {
+            alert("Try Again");
+            location.reload(); //refreshing the page
+        }
+
+    </script>
+
+
+</body>
+</html>
+
+
